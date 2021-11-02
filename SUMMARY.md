@@ -2,7 +2,7 @@
 
 * [README](README.md)
 
-## Group 1
+## 📝 Solidity
 
-* [Solidity 简介](group-1/solidity-jian-jie.md)
-* [Page 2](group-1/page-2.md)
+* [Solidity 简介](solidity/solidity-jian-jie.md)
+* [Page 2](solidity/page-2.md)
