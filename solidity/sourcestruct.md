@@ -1,4 +1,4 @@
-# Solidity 源文件结构
+# 源文件结构
 
 1. SPDX License Identifier
 2. Pragmas
