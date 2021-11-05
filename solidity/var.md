@@ -20,7 +20,7 @@
 - `msg.sig(bytes4)`: calldata 的前 4 字节（函数标识符）
 - `msg.value(uint)`: 随消息发送 wei 数量
 - `tx.gasprice(uint)`: 交易的 gas 价格
-- `tx.origin(address payable)`: 
+- `tx.origin(address payable)`: 交易发起者（完全的调用链） 
 
 ## 错误处理
 
