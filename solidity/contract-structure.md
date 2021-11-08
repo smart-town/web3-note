@@ -13,7 +13,7 @@ Solidity 中，合约类似于其他语言中的“类”。
 ## 函数
 
 函数是代码的可见单元，函数通常在合约内部定义，但是也可以在合约外部定义。
-```sol
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity >0.7.0 <0.9.0;
 contract TinyAction {
@@ -30,7 +30,7 @@ function helper(uint x) pure returns(uint) {
 ## 函数修改器
 
 函数修改器可以用来以声明的方式修改函数语义。
-```sol
+```solidity
 pragma solidity >= 0.4.22 <0.9.0;
 contract MyPurchase {
     address public seller;
@@ -47,7 +47,7 @@ contract MyPurchase {
 ## 事件 Event
 
 事件是能方便调用以太坊虚拟机日志功能的接口。
-```sol
+```solidity
 contract TinyAuction {
     event HighestBidIncreased(address binder, uint amount); // 事件
     function bid() public payable {
@@ -59,7 +59,7 @@ contract TinyAuction {
 ## 结构体
 
 结构体是可以将几个变量分组的自定义类型。
-```sol
+```solidity
 contract TinyBallot {
     struct Vote {
         uint weight;
@@ -73,7 +73,7 @@ contract TinyBallot {
 ## 枚举类型
 
 枚举可以用来创建一定数量的“常量值”构成的自定义类型。
-```sol
+```solidity
 contract Upchain {
     enum State {Created, Locked, InValid} 枚举
 }

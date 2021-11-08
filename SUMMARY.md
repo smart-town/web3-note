@@ -11,3 +11,5 @@
 * [类型](solidity/types.md)
 * [变量](solidity/var.md)
 * [表达式和控制结构](solidity/constrol-structures.md)
+* [合约介绍1](solidity/contracts1.md)
+* [合约介绍2](solidity/contracts2.md)

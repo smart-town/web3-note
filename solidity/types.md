@@ -18,7 +18,7 @@ Solidity 是一种静态类型语言，意味着每个变量都要在编译时�
 
 ### 地址类型成员变量
 `balance`和`transfer`，可以使用`balance`属性查询一个地址的余额，也可以用`transfer`函数向一个可支付地址`payable address`发送以太币。
-```sol
+```solidity
 address x = 0x123;
 address myAddress = this;
 if (x.balance < 10 && myAddress.balance >= 10) x.transfer(10);
@@ -29,13 +29,13 @@ if (x.balance < 10 && myAddress.balance >= 10) x.transfer(10);
 `call`，`delegatecall`，`staticcall`为了与不符合**应用二进制接口**的合约交互，或者要更直接地控制编码，提供了这三个函数，它们都带有一个`bytes memory`参数和返回执行成功状态`bool`和数据`bytes memory`。
 
 函数`abi.encode, abi.encodePacked, abi.encodeWithSelector, abi.encodeWithSignature`可以用来编码结构化数据。
-```sol
+```solidity
 bytes memory payload = abi.encodeWithSignature("register(string)", "MyName");
 (bool success, bytes memory returnData) = address(nameReg).call(payload);
 require(success);
 ```
 此外，为了与不符合应用二进制接口的合约交互，于是就有了可以接受任意类型任意数量参数的`call`函数，这些参数会被打包到以 32 字节为单位的连续区域中存放。其中一个例外是当第一个参数被编码成正好 4 个字节的情况，这种情况下， 这个参数后面不会填充后续参数编码，以允许使用函数签名。
-```sol
+```solidity
 address nameReg = 0x12345;
 nameReg.call('register', 'MyName')
 nameReg.call(bytes4(kecaak256("fun(uint256)")), a)
